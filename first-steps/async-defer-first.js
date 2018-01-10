@@ -17,4 +17,5 @@ small -> big
 
 big -> small
 <script defer src="big.js"></script>
-<script defer src="small.js"></script>*/
+<script defer src="small.js"></script>
+*/
