@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Напишите функцию sumTo(n), которая для данного n вычисляет сумму чисел от 1 до n, например:
+    // 1 с использованием цикла
+    function sumTo1(n) {
+
+        let result = 0;
+        for (let i = 1; i <= n; i++) {
+            result += i;
+        }
+        return result;
+    }
+
+    // 2 Через рекурсию, т.к. sumTo(n) = n + sumTo(n-1) для n > 1.
+    function sumTo2(n) {
+        if (n != 1) {
+            return n + sumTo2(n - 1);
+        } else {
+            return n;
+        }
+    }
+
+    // 3 С использованием формулы для суммы арифметической прогрессии.
+    function sumTo3(n) {
+        return (1 + n) * n / 2;
+    }
+
+    alert(sumTo3(1));
+    alert(sumTo3(2));
+    alert(sumTo3(3));
+    alert(sumTo3(4));
+    alert(sumTo3(100));
+</script>
+</body>
+</html>
