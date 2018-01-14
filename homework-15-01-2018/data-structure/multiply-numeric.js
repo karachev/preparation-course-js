@@ -14,7 +14,6 @@ function multiplyNumeric(menu) {
       menu[key] *= 2;
     }
   }
-  return menu;
 }
 
 function isNumeric(n) {
