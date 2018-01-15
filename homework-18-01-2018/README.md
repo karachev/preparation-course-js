@@ -22,11 +22,3 @@
 2. [Задача 2](https://learn.javascript.ru/array-methods#функция-removeclass)
 3. [Задача 3](https://learn.javascript.ru/array-methods#сортировка-объектов)
 4. [Задача 4](https://learn.javascript.ru/array-iteration#перепишите-цикл-через-map)
-
-<https://learn.javascript.ru/array-methods#добавить-класс-в-строку>
-
-<https://learn.javascript.ru/array-methods#функция-removeclass>
-
-<https://learn.javascript.ru/array-methods#сортировка-объектов>
-
-<https://learn.javascript.ru/array-iteration#перепишите-цикл-через-map>
