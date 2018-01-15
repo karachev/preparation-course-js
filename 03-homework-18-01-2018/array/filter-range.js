@@ -15,5 +15,3 @@ function filterRange(arr, min, max) {
   }
   return newArr;
 }
-// теперь filtered = [5, 4, 3]
-// arr не изменился
