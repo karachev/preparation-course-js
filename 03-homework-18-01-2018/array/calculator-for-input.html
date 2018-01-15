@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  /*
+Напишите код, который:
+
+Запрашивает по очереди значения при помощи prompt и сохраняет их в массиве.
+  Заканчивает ввод, как только посетитель введёт пустую строку, не число или нажмёт «Отмена».
+При этом ноль 0 не должен заканчивать ввод, это разрешённое число.
+  Выводит сумму всех значений массива*/
+
+  let arr = [];
+  let result = 0;
+  while (true) {
+    let value = prompt("Введите значение", "");
+    if (value == null || value == "" || isNaN(value)) {
+      break;
+    }
+    arr.push(+value);
+    for (let i = 0; i < value.length; i++) {
+      result += arr[i]
+    }
+  }
+
+  alert(result);
+
+</script>
+</body>
+</html>
