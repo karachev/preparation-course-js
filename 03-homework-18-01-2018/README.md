@@ -31,9 +31,9 @@
 
 ## [Замыкания, области видимости](https://learn.javascript.ru/functions-closures)
 1. Глобальный объект
-* Window и переменная
-* Window и переменная 2
-* Window и переменная 3
+* Window и переменная +
+* Window и переменная 2 +
+* Window и переменная 3 +
 
 
 ## [Методы объектов и контекст вызова](https://learn.javascript.ru/objects-more)
