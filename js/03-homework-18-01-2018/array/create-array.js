@@ -15,18 +15,18 @@
 Рэп, Регги, Классика, Рок-н-Ролл
 */
 
-let styles = ["Джаз", "Блюз"];
+let styles = [`Джаз`, `Блюз`];
 console.log(styles);
 
-styles.push("Рок-н-Ролл");
+styles.push(`Рок-н-Ролл`);
 console.log(styles);
 
-styles[styles.length - 2] = "Классика";
+styles[styles.length - 2] = `Классика`;
 console.log(styles);
 
 styles.shift();
 console.log(styles);
 
-styles.unshift("Регги");
-styles.unshift("Рэп");
+styles.unshift(`Регги`);
+styles.unshift(`Рэп`);
 console.log(styles);

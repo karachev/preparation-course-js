@@ -1,15 +1,5 @@
-#{
-##  "extends": 'google',
-#  "extends": "eslint:recommended",
-#  "rules": {
-##    "linebreak-style": 0,
-##    'linebreak-style': ['error', 'unix'],
-##    'quotes': ['error', 'backtick']
-#  }
-#}
-
 module.exports = {
-  extends: [`htmlacademy/es5`],
+  extends: [`es5`],
   rules: {
     // ECMAScript 6
     // http://eslint.org/docs/rules/#ecmascript-6

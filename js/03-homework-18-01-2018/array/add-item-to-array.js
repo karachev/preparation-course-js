@@ -2,6 +2,6 @@
 
 У нас есть массив goods. Напишите код для добавления в его конец значения «Компьютер». */
 
-let goods = ["Я", "your", "zenit"];
-goods.push("Компьютер");
+let goods = [`Я`, `your`, `zenit`];
+goods.push(`Компьютер`);
 console.log(goods);
