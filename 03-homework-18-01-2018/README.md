@@ -66,6 +66,9 @@
 ## Факультативно
 1. [Дата и Время](https://learn.javascript.ru/datetime)
 2. [Прототип объекта](https://learn.javascript.ru/prototype)
+* Чему равно свойство после delete? +
+* Прототип и this +
+* Алгоритм для поиска +
 3. [Дескрипторы, геттеры и сеттеры свойств](https://learn.javascript.ru/descriptors-getters-setters)
 
 ## Дополнительная задача:
