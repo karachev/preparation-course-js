@@ -15,7 +15,7 @@ let table = {
 
 let bed = {
   sheet: 1,
-  pillow: 2
+  pillow:             2
 };
 
 let pockets = {
