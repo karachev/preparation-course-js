@@ -14,14 +14,22 @@
     sum: function () {
       return this['1'] + this['2'];
     },
+    difference: function () {
+      return this['1'] - this['2'];
+    },
+    division: function () {
+      return this['1'] / this['2'];
+    },
     mul: function () {
       return this['1'] * this['2'];
     },
   }
 
   calculator.read();
-  alert( calculator.sum() );
-  alert( calculator.mul() );
+  alert("Сумма: " + calculator.sum() );
+  alert("Разность: " + calculator.difference() );
+  alert("Деление: " + calculator.division() );
+  alert("Произведение: " + calculator.mul() );
 </script>
 </body>
 </html>
