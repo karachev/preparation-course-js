@@ -1,7 +1,17 @@
-root: true
+#root: true
+#
+#env:
+#  browser: true
+#
+#"extends": "google",
+#"rules": {
+#  linebreak-style: ["error", "unix"]
+#}
 
-env:
-  browser: true
-
-extends:
-  "htmlacademy/es5"
+{
+  "extends": "google",
+  "rules": {
+    linebreak-style: ["error", "unix"],
+    quotes: ["error", "backtick"]
+  }
+}

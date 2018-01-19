@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /*
 Перепишите if..else с использованием нескольких операторов '?'.
@@ -17,11 +17,11 @@ if (login == 'Вася') {
     message = '';
 }*/
 
-let login = "";
+let login = '';
 
-let message =   (login == "Вася") ? "Привет" :
-    (login == "Директор") ? "Здравствуйте" :
-    (login == "") ? "Нет логина" :
-            "";
+let message =   (login == 'Вася') ? 'Привет' :
+    (login == 'Директор') ? 'Здравствуйте' :
+    (login == '') ? 'Нет логина' :
+            '';
 
 console.log(message);

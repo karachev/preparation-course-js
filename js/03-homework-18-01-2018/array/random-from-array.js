@@ -6,7 +6,7 @@ P.S. Код для генерации случайного целого от min
 
   var rand = min + Math.floor(Math.random() * (max + 1 - min));*/
 
-let arr = ["Яблоко", "Апельсин", "Груша", "Лимон"];
+let arr = ['Яблоко', 'Апельсин', 'Груша', 'Лимон'];
 let result = getRand(0, arr.length - 1);
 console.log(arr[result]);
 

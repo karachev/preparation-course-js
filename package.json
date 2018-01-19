@@ -13,13 +13,19 @@
   },
   "homepage": "https://github.com/karachev/preparation-course-js",
   "devDependencies": {
-    "eslint": "4.2.0",
-    "eslint-config-htmlacademy": "0.3.x"
+    "eslint": "^4.2.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-config-htmlacademy": "0.3.x",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
   },
   "license": "MIT",
   "dependencies": {},
   "scripts": {
-    "test": "eslint 01-homework-11-01-2018/ "
+    "test": "eslint js/ "
   },
   "engines": {
     "node": "^6.10"

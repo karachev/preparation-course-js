@@ -9,4 +9,4 @@ function ucFirst(str) {
   return newStr;
 }
 
-console.log(ucFirst("вася"));
+console.log(ucFirst('вася'));
