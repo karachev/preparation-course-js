@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  var calculator = {
+    read: function () {
+      this['1'] = +prompt("Введите 1 число:", "")
+      this['2'] = +prompt("Введите 2 число:", "");
+    },
+    sum: function () {
+      return this['1'] + this['2'];
+    },
+    mul: function () {
+      return this['1'] * this['2'];
+    },
+  }
+
+  calculator.read();
+  alert( calculator.sum() );
+  alert( calculator.mul() );
+</script>
+</body>
+</html>
