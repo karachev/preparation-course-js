@@ -18,7 +18,7 @@
 * Удаление элементов :x:
 * insertAfter :interrobang:
 * removeChildren  ::white_check_mark::
-* Почему остаётся "ааа" :x:
+* Почему остаётся "ааа" ::white_check_mark::
 * Создать список ::white_check_mark::
 * Создайте дерево из объекта :x:
 * Дерево ::white_check_mark::
