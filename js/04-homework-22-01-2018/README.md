@@ -16,8 +16,8 @@
 6. Добавление и удаление узлов
 * createTextNode vs innerHTML :heavy_check_mark:
 * Удаление элементов :x:
-* insertAfter :x:
-* removeChildren  :heavy_check_mark: :x:
+* insertAfter :interrobang:
+* removeChildren  :heavy_check_mark:
 * Почему остаётся "ааа" :x:
 * Создать список :heavy_check_mark:
 * Создайте дерево из объекта :x:
