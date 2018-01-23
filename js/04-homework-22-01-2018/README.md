@@ -14,14 +14,14 @@
 * Дерево +- ***Разобраться***
 ***Внутреннее устройство поисковых методов*** это было не надо
 6. Добавление и удаление узлов
-* createTextNode vs innerHTML :heavy_check_mark:
+* createTextNode vs innerHTML ::white_check_mark::
 * Удаление элементов :x:
 * insertAfter :interrobang:
-* removeChildren  :heavy_check_mark:
+* removeChildren  ::white_check_mark::
 * Почему остаётся "ааа" :x:
-* Создать список :heavy_check_mark:
+* Создать список ::white_check_mark::
 * Создайте дерево из объекта :x:
-* Дерево :heavy_check_mark:
+* Дерево ::white_check_mark::
 * Создать календарь в виде таблицы :x:
 * Часики с использованием "setInterval" :x:
 
