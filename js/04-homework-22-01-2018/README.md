@@ -17,7 +17,7 @@
 * createTextNode vs innerHTML +
 * Удаление элементов ?
 * insertAfter
-* removeChildren
+* removeChildren  +
 * Почему остаётся "ааа" ?
 * Создать список
 * Создайте дерево из объекта
