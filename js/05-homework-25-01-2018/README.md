@@ -8,7 +8,7 @@
 5. Поиск: getElement* и querySelector* и не только
 6. Внутреннее устройство поисковых методов
 7. Свойства узлов: тип, тег и содержимое ✅
-8. Атрибуты и DOM-свойства
+8. Атрибуты и DOM-свойства ✅
 9. Методы contains и compareDocumentPosition
 10. Добавление и удаление узлов
 11. Мультивставка: insertAdjacentHTML и DocumentFragment
