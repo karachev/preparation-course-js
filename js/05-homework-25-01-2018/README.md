@@ -9,8 +9,8 @@
 6. Внутреннее устройство поисковых методов
 7. Свойства узлов: тип, тег и содержимое ✅
 8. Атрибуты и DOM-свойства ✅
-9. Методы contains и compareDocumentPosition
-10. Добавление и удаление узлов
+9. Методы contains и compareDocumentPosition ✅
+10. Добавление и удаление узлов :interrobang:
 11. Мультивставка: insertAdjacentHTML и DocumentFragment
 12. Метод document.write
 13. Стили, getComputedStyle

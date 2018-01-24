@@ -26,7 +26,7 @@
 * Часики с использованием "setInterval" :x:
 
 ## Задачи
-1. [Список друзей из массива (условие)](https://plnkr.co/edit/ZHh2lwzPzHfBCZjW05cK?p=preview)
+1. [Список друзей из массива (условие)](https://plnkr.co/edit/ZHh2lwzPzHfBCZjW05cK?p=preview) ::white_check_mark::
 2. [Список свойств в объекте (условие)](https://plnkr.co/edit/c5NJZLmH0rTyMY5nWwAe?p=preview)
 
 ## Дополнительное чтение
