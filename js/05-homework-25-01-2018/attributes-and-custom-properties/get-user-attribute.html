@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<div id="widget" data-widget-name="menu">Выберите жанр</div>
+
+<script>
+  // Получите div в переменную.
+  let div = document.body.querySelector("#widget");
+
+  // Получите значение атрибута "data-widget-name" в переменную.
+  let dataWidget = div.dataset.widgetName;
+
+  // Выведите его.
+  alert(dataWidget)
+
+</script>
+</body>
+</html>
