@@ -13,8 +13,8 @@
 10. Добавление и удаление узлов :interrobang:
 11. Мультивставка: insertAdjacentHTML и DocumentFragment
 * Другое решение [тут](https://plnkr.co/edit/05PO2EamCr08CiJENKsw?p=info)
-12. Метод document.write
-13. Стили, getComputedStyle
+12. Метод document.write ✅
+13. Стили, getComputedStyle ✅
 14. Размеры и прокрутка элементов
 15. Размеры и прокрутка страницы
 16. Координаты в окне
