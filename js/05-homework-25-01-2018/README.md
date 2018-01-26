@@ -25,3 +25,36 @@
 1. [Задача 1](https://next.plnkr.co/edit/agb9zoflDWruXKuc)
 2. [Задача 2](https://learn.javascript.ru/task/create-object-tree)
 3. [Задача 3](https://next.plnkr.co/edit/9OLNtgmui1dLNigO)
+
+# UPDATE:
+## [Документ и объекты страницы](https://learn.javascript.ru/document)
+1. Окружение: DOM, BOM и JS
+2. Дерево DOM
+3. Работа с DOM из консоли
+4. Навигация по DOM-элементам
+5. Поиск: getElement* и querySelector* и не только
+7. Свойства узлов: тип, тег и содержимое
+8. Современный DOM: полифиллы
+10. Методы contains и compareDocumentPosition
+11. Добавление и удаление узлов
+12. Мультивставка: insertAdjacentHTML и DocumentFragment
+13. Метод document.write
+14. Стили, getComputedStyle
+15. Размеры и прокрутка элементов
+16. Размеры и прокрутка страницы
+17. Координаты в окне
+18. Координаты в документе
+19. Итого
+
+## Дополнительное чтение
+1. [Размеры и прокрутка элементов](https://learn.javascript.ru/metrics)
+2. [Modifying the document](http://javascript.info/modifying-document#creating-an-element)
+
+## Задачи
+1. [Задача: список друзей](https://plnkr.co/edit/ZHh2lwzPzHfBCZjW05cK?p=preview)
+2. [Задача: таблица ключ-значение объекта](https://plnkr.co/edit/c5NJZLmH0rTyMY5nWwAe?p=preview)
+3. [Задача: написать функцию highlight для таблицы](https://next.plnkr.co/edit/9OLNtgmui1dLNigO?preview)
+4. [Задача: создать календарь в виде таблицы](https://learn.javascript.ru/task/calendar-table)
+
+## Факультативно
+1. [Задача: Создайте дерево из объекта](https://learn.javascript.ru/task/create-object-tree)
