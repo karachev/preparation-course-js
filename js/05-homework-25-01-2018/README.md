@@ -51,9 +51,9 @@
 2. [Modifying the document](http://javascript.info/modifying-document#creating-an-element)
 
 ## Задачи
-1. [Задача: список друзей](https://plnkr.co/edit/ZHh2lwzPzHfBCZjW05cK?p=preview)
-2. [Задача: таблица ключ-значение объекта](https://plnkr.co/edit/c5NJZLmH0rTyMY5nWwAe?p=preview)
-3. [Задача: написать функцию highlight для таблицы](https://next.plnkr.co/edit/9OLNtgmui1dLNigO?preview)
+1. [Задача: список друзей](https://plnkr.co/edit/ZHh2lwzPzHfBCZjW05cK?p=preview) ✅
+2. [Задача: таблица ключ-значение объекта](https://plnkr.co/edit/c5NJZLmH0rTyMY5nWwAe?p=preview) ***Подумать***
+3. [Задача: написать функцию highlight для таблицы](https://next.plnkr.co/edit/9OLNtgmui1dLNigO?preview) ✅
 4. [Задача: создать календарь в виде таблицы](https://learn.javascript.ru/task/calendar-table)
 
 ## Факультативно
