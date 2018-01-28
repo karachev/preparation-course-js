@@ -30,7 +30,24 @@
      * @param {Node} elem       Элемент, который будет позиционирован
      */
     function positionAt(anchor, position, elem) {
-      // ваш код...
+      var anchorCoords = anchor.getBoundingClientRect();
+
+      switch (position) {
+        case "top":
+          elem.style.left = anchorCoords.left + "px";
+          elem.style.top = anchorCoords.top - elem.offsetHeight + "px";
+          break;
+
+        case "right":
+          elem.style.left = anchorCoords.left + anchor.offsetWidth + "px";
+          elem.style.top = anchorCoords.top + "px";
+          break;
+
+        case "bottom":
+          elem.style.left = anchorCoords.left + "px";
+          elem.style.top = anchorCoords.top + anchor.offsetHeight + "px";
+          break;
+      }
     }
 
     /**
@@ -39,6 +56,12 @@
      */
     function showNote(anchor, position, html) {
       // ваш код ...
+      let note = document.createElement('div');
+      note.innerHTML = html;
+      note.className = 'note';
+      document.body.appendChild(note)
+
+      positionAt(anchor, position, note);
     }
 
     // проверка работоспособности
