@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    .arrow-left,
+    .arrow-bottom {
+      color: green;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    p {
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+
+<body>
+  <p id="text"><span id="arrow-left" class="arrow-left">▶</span><span id="arrow-bottom" class="arrow-bottom hidden">▼</span>Сладости (нажми меня)!</p>
+  <ul class="hidden">
+    <li>Торт</li>
+    <li>Пончик</li>
+    <li>Пирожное</li>
+  </ul>
+
+  <script>
+    let text = document.querySelector('#text');
+    let arrowLeft = document.querySelector('#arrow-left');
+    let arrowBottom = document.querySelector('#arrow-bottom');
+
+    text.addEventListener('click', function () {
+      arrowBottom.classList.toggle('hidden');
+      arrowLeft.classList.toggle('hidden');
+      document.querySelector('ul').classList.toggle('hidden');
+    })
+
+  </script>
+
+
+</body>
+
+</html>
