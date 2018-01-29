@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ваша верстка виджета, ваши стили -->
+  <div class="carousel" id="carousel">
+    <button class="arrow prev">⇦</button>
+    <div class="gallery">
+      <ul>
+        <li><img src="https://js.cx/carousel/1.png"></li>
+        <li><img src="https://js.cx/carousel/2.png"></li>
+        <li><img src="https://js.cx/carousel/3.png"></li>
+        <li><img src="https://js.cx/carousel/4.png"></li>
+        <li><img src="https://js.cx/carousel/5.png"></li>
+        <li><img src="https://js.cx/carousel/6.png"></li>
+        <li><img src="https://js.cx/carousel/7.png"></li>
+        <li><img src="https://js.cx/carousel/8.png"></li>
+        <li><img src="https://js.cx/carousel/9.png"></li>
+        <li><img src="https://js.cx/carousel/10.png"></li>
+      </ul>
+    </div>
+    <button class="arrow next">⇨</button>
+  </div>
+
+  <script>
+    let margin = 0;
+    let buttonPrev = document.querySelector('.arrow.prev');
+    let buttonNext = document.querySelector('.arrow.next');
+    let ul = document.querySelector('ul');
+
+    buttonPrev.addEventListener('click', function () {
+      if (margin >= -390) {
+        margin = 0;
+      } else {
+        margin += 390;
+      }
+      ul.style.marginLeft = margin + 'px';
+    })
+
+    buttonNext.addEventListener('click', function () {
+      if (margin <= -780) {
+        margin = -910;
+      } else {
+        margin -= 390;
+      }
+      ul.style.marginLeft = margin + 'px';
+    })
+
+
+  </script>
+</body>
+
+</html>
