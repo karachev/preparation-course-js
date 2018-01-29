@@ -29,20 +29,17 @@ function printProfile () {
 
 document.body.append(printProfile());
 
-addProfileInTable(profile)
+addProfileInTable(profile);
 
 function addProfileInTable (profile) {
   let thead = document.querySelector('thead');
-  let oldTr = thead.querySelectorAll('tr');
-
-  let th = thead.querySelectorAll('th');
 
   for (let key in profile) {
     let tr = document.createElement('tr');
     thead.appendChild(tr);
-    let th1 = document.createElement('th')
+    let th1 = document.createElement('th');
     tr.appendChild(th1);
-    let th2 = document.createElement('th')
+    let th2 = document.createElement('th');
     tr.appendChild(th2);
     th1.innerHTML = key;
     th2.innerHTML = profile[key];
