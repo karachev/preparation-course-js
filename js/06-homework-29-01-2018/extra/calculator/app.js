@@ -2,9 +2,12 @@
 
 let num;
 let operation;
+let val = '';
 let numDiv = document.querySelector('.calc-numbers');
 let operationDiv = document.querySelector('.calc-operations');
 let inputField = document.querySelector('#inputField');
+
+let result;
 
 numDiv.addEventListener('click', function (event) {
   event.preventDefault();
@@ -22,10 +25,31 @@ operationDiv.addEventListener('click', function (event) {
 
 function getNum(node) {
   num = node;
-  inputField.setAttribute('placeholder', num.innerHTML);
+  val += num.innerHTML;
+  inputField.setAttribute('placeholder', val);
 }
 
 function getOperation(node) {
   operation = node;
-  inputField.setAttribute('placeholder', operation.innerHTML);
+  switch (operation.innerHTML) {
+    case '+':
+      alert('+');
+      break;
+    case '-':
+      alert('-');
+      break;
+    case '×':
+      alert('×');
+      break;
+    case '÷':
+      alert('÷');
+      break;
+    case 'C':
+      alert('C');
+      break;
+    case '=':
+      alert('=');
+      break;
+  }
+  // inputField.setAttribute('placeholder', operation.innerHTML);
 }
