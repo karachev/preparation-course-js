@@ -1,7 +1,5 @@
 "use strict";
 
-let num;
-let operation;
 let numDiv = document.querySelector('.calc-numbers');
 let operationDiv = document.querySelector('.calc-operations');
 let inputField = document.querySelector('#inputField');
@@ -61,7 +59,7 @@ numDiv.addEventListener('click', function (evt) {
   evt.preventDefault();
   let target = event.target;
   if (target.className !== 'calc-numbers__sym') return;
-  setNum(target);
+  writeSymbol(target);
 });
 
 /** `Слушает` клики на блоке с математическими знаками */
@@ -69,36 +67,23 @@ operationDiv.addEventListener('click', function (evt) {
   evt.preventDefault();
   let target = event.target;
   if (target.className !== 'calc-operations__sym') return;
-  setOperation(target);
+  writeSymbol(target);
 });
 
 /**
- * Записывает цифры в поле
+ * Записывает символ в поле
  * @param {Object} node - узел, на который нажали
  * */
-function setNum(node) {
-  num = node;
-  inputField.placeholder += num.innerHTML;
-}
-
-/**
- * Записывает математичекие знаки в поле
- * @param {Object} node - узел, на который нажали
- * */
-function setOperation(node) {
-  operation = node;
-  switch (operation.innerHTML) {
-    case '+':
-    case '-':
-    case '*':
-    case '/':
-      inputField.placeholder += operation.innerHTML;
-      break;
+function writeSymbol(node) {
+  switch (node.innerHTML) {
     case 'C':
       resetField();
       break;
     case '=':
       resultField();
+      break;
+    default:
+      inputField.placeholder += node.innerHTML;
       break;
   }
 }
