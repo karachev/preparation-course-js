@@ -1,12 +1,12 @@
 .calculator {
-  width: 300px;
+  width: 500px;
   margin: 0 auto;
-  background-color: #757575;
+  background-color: #dddddd;
 }
 
 .calc-field {
   width: 100%;
-  height: 50px;
+  height: 70px;
 }
 
 .calc-field input,
@@ -15,23 +15,68 @@
   height: 100%;
   box-sizing: border-box;
   text-align: right;
-  background-color: white;
+  background-color: black;
   line-height: 3;
+  border: none;
+  color: white;
+  font-size: 41px;
+}
+
+input[placeholder] {
+  color: white;
+}
+
+.calc-numbers {
+  float: left;
+  width: 75%;
+}
+
+.calc-operations {
+  float: right;
+  width: 25%;
 }
 
 .calc-numbers,
 .calc-operations{
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+.calc-numbers__sym {
+  width: 33.3%;
+}
+
+.calc-operations__sym {
+  width: 100%;
+}
+
 .calc-numbers__sym,
-.calc-operations__sym{
-  width: 32.3%;
+.calc-operations__sym {
   height: 50px;
   margin: auto;
   text-align: center;
   box-sizing: border-box;
+  border: none;
+}
+
+.calc-numbers__sym--big {
+  width: 66.66%;
+}
+
+.calc-operations__sym {
+  background-color: orange;
+  color: white;
+  border: none;
+  font-size: 41px;
+}
+
+.calc-numbers__sym {
+  font-size: 41px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
