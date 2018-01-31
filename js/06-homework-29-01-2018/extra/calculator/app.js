@@ -39,7 +39,7 @@ const KEYS = [
   13, // `ENTER` цифровые
 ];
 
-let body = document.querySelector('body');
+/** `Слушает` клики на определённые клавиши */
 window.addEventListener('keydown', function (evt) {
   evt.preventDefault();
   inputField.focus();
@@ -56,26 +56,36 @@ window.addEventListener('keydown', function (evt) {
   }
 });
 
+/** `Слушает` клики на блоке с цифврами */
 numDiv.addEventListener('click', function (evt) {
   evt.preventDefault();
   let target = event.target;
   if (target.className !== 'calc-numbers__sym') return;
-  getNum(target);
+  setNum(target);
 });
 
+/** `Слушает` клики на блоке с математическими знаками */
 operationDiv.addEventListener('click', function (evt) {
   evt.preventDefault();
   let target = event.target;
   if (target.className !== 'calc-operations__sym') return;
-  getOperation(target);
+  setOperation(target);
 });
 
-function getNum(node) {
+/**
+ * Записывает цифры в поле
+ * @param {Object} node - узел, на который нажали
+ * */
+function setNum(node) {
   num = node;
   inputField.placeholder += num.innerHTML;
 }
 
-function getOperation(node) {
+/**
+ * Записывает математичекие знаки в поле
+ * @param {Object} node - узел, на который нажали
+ * */
+function setOperation(node) {
   operation = node;
   switch (operation.innerHTML) {
     case '+':
@@ -93,10 +103,12 @@ function getOperation(node) {
   }
 }
 
+/** Сбрасывает поле ввода */
 function resetField() {
   inputField.setAttribute('placeholder', '');
 }
 
+/** Выводит результат вычислений */
 function resultField() {
   inputField.placeholder = eval(inputField.placeholder);
 }
