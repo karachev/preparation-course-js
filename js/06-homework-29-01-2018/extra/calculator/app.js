@@ -6,6 +6,13 @@ let numDiv = document.querySelector('.calc-numbers');
 let operationDiv = document.querySelector('.calc-operations');
 let inputField = document.querySelector('#inputField');
 
+let body = document.querySelector('body');
+
+document.addEventListener('keydown', function (event) {
+  event.preventDefault();
+  inputField.focus();
+});
+
 numDiv.addEventListener('click', function (event) {
   event.preventDefault();
   let target = event.target;
@@ -22,7 +29,7 @@ operationDiv.addEventListener('click', function (event) {
 
 function getNum(node) {
   num = node;
-  inputField.placeholder += num.innerHTML;
+  inputField.innerHTML += num.innerHTML;
 }
 
 function getOperation(node) {
@@ -32,13 +39,14 @@ function getOperation(node) {
     case '-':
     case '*':
     case '/':
-      inputField.placeholder += operation.innerHTML;
+      inputField.innerHTML += operation.innerHTML;
       break;
     case 'C':
-      inputField.setAttribute('placeholder', '');
+      // inputField.setAttribute('placeholder', '');
+      inputField.innerHTML = '';
       break;
     case '=':
-      inputField.placeholder = eval(inputField.placeholder);
+      inputField.innerHTML= eval(inputField.innerHTML);
       break;
   }
 }
