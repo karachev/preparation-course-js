@@ -1,0 +1,29 @@
+td {
+  height: 30px;
+  width: 30px;
+  border: 1px solid black;
+  cursor: pointer;
+  /*color: transparent;*/
+  text-align: center;
+  line-height: 2;
+  background-color: #757575;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.bomb {
+  /*background-color: red;*/
+}
+
+.check {
+  background-color: white;
+}
+
+.bang {
+  background-image: url("img/mina.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
