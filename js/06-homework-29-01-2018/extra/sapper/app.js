@@ -31,6 +31,13 @@ table.addEventListener('click', function (evt) {
   setTd(target);
 });
 
+table.addEventListener('contextmenu', function (evt) {
+  evt.preventDefault();
+  let target = event.target;
+  if (target.tagName !== 'TD') return;
+  target.classList.toggle('possible-bomb');
+});
+
 function setTd(node) {
   if (node.classList.contains('bomb')) {
     node.classList.add('bang');
@@ -44,7 +51,6 @@ function setTd(node) {
 function createNear(node) {
   let x;
   let y;
-  // debugger;
   node.classList.add('check-now');
   for (let i = 0; i < COUNTER_COLUMNS; i++) {
     for (let j = 0; j < COUNTER_ROWS; j++) {
@@ -89,3 +95,7 @@ function createNear(node) {
 //
 //   node.classList.remove('check-now');
 // }
+
+// TODO рефакторить
+// TODO продумать конец если выиграл
+// TODO продумать конец если проиграл

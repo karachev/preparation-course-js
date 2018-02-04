@@ -27,3 +27,7 @@ table {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.possible-bomb {
+  background-color: yellow;
+}
