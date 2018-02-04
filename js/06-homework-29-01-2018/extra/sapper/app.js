@@ -36,14 +36,26 @@ table.addEventListener('contextmenu', function (evt) {
   let target = event.target;
   if (target.tagName !== 'TD') return;
   target.classList.toggle('possible-bomb');
+  checkPossibleBomb();
 });
+
+function checkPossibleBomb() {
+  let possibleBomb = document.querySelectorAll('.possible-bomb');
+  let countPossibleBomb = 0;
+  for (let i = 0; i < possibleBomb.length; i++) {
+    if (possibleBomb[i].classList.contains('bomb')) countPossibleBomb++;
+  }
+  if (countPossibleBomb === COUNTER_BOMB) {
+    alert("Поздравляем! Вы выиграли!")
+  }
+}
 
 function setTd(node) {
   if (node.classList.contains('bomb')) {
     node.classList.add('bang');
+    alert("Вы проиграли");
     return;
   }
-  // setPosition(node);
   createNear(node);
   node.classList.add('check');
 }
@@ -82,20 +94,7 @@ function createNear(node) {
 
 }
 
-// function setPostion(node) {
-//   node.classList.add('check-now');
-//
-//   for (let i = 0; i < COUNTER_ROWS; i++) {
-//     for (let j = 0; j < COUNTER_COLUMNS; j++) {
-//       if (table.rows[i].cells[j].innerHTML === 'check-now') {
-//
-//       }
-//     }
-//   }
-//
-//   node.classList.remove('check-now');
-// }
-
 // TODO рефакторить
 // TODO продумать конец если выиграл
 // TODO продумать конец если проиграл
+// TODO расставить все комментарии JSDoc
