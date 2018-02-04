@@ -3,7 +3,6 @@ td {
   width: 35px;
   border: 1px solid black;
   cursor: pointer;
-  /*color: transparent;*/
   text-align: center;
   line-height: 2;
   background-color: #757575;
@@ -11,10 +10,6 @@ td {
 
 table {
   border-collapse: collapse;
-}
-
-.bomb {
-  /*background-color: red;*/
 }
 
 .check {

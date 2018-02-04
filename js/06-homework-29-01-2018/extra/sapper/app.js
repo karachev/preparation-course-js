@@ -9,21 +9,7 @@ let td = document.querySelectorAll('td');
 
 createBombs();
 
-function createBombs() {
-  outer:
-  for (let i = 0; i < COUNTER_BOMB; i++) {
-    let x = Math.floor(Math.random() * COUNTER_ROWS);
-    let y = Math.floor(Math.random() * COUNTER_COLUMNS);
-
-    if (table.rows[x].cells[y].classList.contains('bomb')) {
-      i--;
-      continue outer;
-    }
-
-    table.rows[x].cells[y].classList.add("bomb");
-  }
-}
-
+/** `Слушает` клики на ячейки поля */
 table.addEventListener('click', function (evt) {
   evt.preventDefault();
   let target = event.target;
@@ -31,6 +17,7 @@ table.addEventListener('click', function (evt) {
   setTd(target);
 });
 
+/** `Слушает` правые клики на ячейки поля */
 table.addEventListener('contextmenu', function (evt) {
   evt.preventDefault();
   let target = event.target;
@@ -39,9 +26,26 @@ table.addEventListener('contextmenu', function (evt) {
   checkPossibleBomb();
 });
 
+/** Создает бомбы и добавляет их на поле */
+function createBombs() {
+  outer:
+    for (let i = 0; i < COUNTER_BOMB; i++) {
+      let x = Math.floor(Math.random() * COUNTER_ROWS);
+      let y = Math.floor(Math.random() * COUNTER_COLUMNS);
+
+      if (table.rows[x].cells[y].classList.contains('bomb')) {
+        i--;
+        continue outer;
+      }
+      table.rows[x].cells[y].classList.add("bomb");
+    }
+}
+
+/** Проверяет возможные бомбы и настоящие бомбы */
 function checkPossibleBomb() {
   let possibleBomb = document.querySelectorAll('.possible-bomb');
   let countPossibleBomb = 0;
+
   for (let i = 0; i < possibleBomb.length; i++) {
     if (possibleBomb[i].classList.contains('bomb')) countPossibleBomb++;
   }
@@ -50,6 +54,10 @@ function checkPossibleBomb() {
   }
 }
 
+/**
+ * Провеярет ячейку td
+ * @param {Object} node - ячейка td, на которую нажали
+ * */
 function setTd(node) {
   if (node.classList.contains('bomb')) {
     node.classList.add('bang');
@@ -60,9 +68,15 @@ function setTd(node) {
   node.classList.add('check');
 }
 
+/**
+ * Обсчитывает количество бомб вокруг
+ * @param {Object} node - ячейка td, на которую нажали
+ * */
 function createNear(node) {
   let x;
   let y;
+  let counter = 0;
+
   node.classList.add('check-now');
   for (let i = 0; i < COUNTER_COLUMNS; i++) {
     for (let j = 0; j < COUNTER_ROWS; j++) {
@@ -73,9 +87,8 @@ function createNear(node) {
       }
     }
   }
-  node.classList.remove('check-now');
 
-  let counter = 0;
+  node.classList.remove('check-now');
   for (let i = x - 1; i <= x + 1; i++) {
     for (let j = y - 1; j <= y + 1; j++){
       if (i >= COUNTER_ROWS ||
@@ -95,6 +108,3 @@ function createNear(node) {
 }
 
 // TODO рефакторить
-// TODO продумать конец если выиграл
-// TODO продумать конец если проиграл
-// TODO расставить все комментарии JSDoc
