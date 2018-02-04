@@ -1,6 +1,6 @@
 td {
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   border: 1px solid black;
   cursor: pointer;
   /*color: transparent;*/
@@ -29,5 +29,9 @@ table {
 }
 
 .possible-bomb {
-  background-color: yellow;
+  background-image: url("img/flag.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
 }
