@@ -32,7 +32,7 @@ table.addEventListener('click', function (evt) {
 });
 
 function setTd(node) {
-  if (node.className === 'bomb') {
+  if (node.classList.contains('bomb')) {
     node.classList.add('bang');
     return;
   }
@@ -49,8 +49,8 @@ function createNear(node) {
   for (let i = 0; i < COUNTER_COLUMNS; i++) {
     for (let j = 0; j < COUNTER_ROWS; j++) {
       if (table.rows[j].cells[i].classList.contains('check-now')) {
-        x = i;
-        y = j;
+        x = j;
+        y = i;
         break;
       }
     }
@@ -58,14 +58,13 @@ function createNear(node) {
   node.classList.remove('check-now');
 
   let counter = 0;
-  // debugger;
   for (let i = x - 1; i <= x + 1; i++) {
-    for (let j = y - 1; j <= x + 1; j++){
+    for (let j = y - 1; j <= y + 1; j++){
       if (i >= COUNTER_ROWS ||
           j >= COUNTER_COLUMNS ||
           i < 0 ||
           j < 0) {
-        break;
+        continue;
       }
       if (table.rows[i].cells[j].classList.contains('bomb')) {
         counter++;
