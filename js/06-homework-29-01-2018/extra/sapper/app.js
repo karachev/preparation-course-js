@@ -121,3 +121,8 @@ function createNear(node) {
   node.innerHTML = counter;
   node.classList.add('bombs' + `${counter}`);
 }
+
+// TODO кнопка рестарта
+// TODO добавить таймер
+// TODO подумать над появлением пустых клеток
+// TODO появление бомб при проигрыше
