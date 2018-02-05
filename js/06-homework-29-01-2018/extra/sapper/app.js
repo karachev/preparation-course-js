@@ -1,11 +1,12 @@
 'use strict';
 
-const COUNTER_BOMB = 5;
-const COUNTER_ROWS = 5;
-const COUNTER_COLUMNS = 5;
+const COUNTER_BOMB = 10;
+const COUNTER_ROWS = 10;
+const COUNTER_COLUMNS = 10;
 
 let table = document.querySelector('table');
-let td = document.querySelectorAll('td');
+
+createField();
 
 createBombs();
 
@@ -25,6 +26,20 @@ table.addEventListener('contextmenu', function (evt) {
   target.classList.toggle('possible-bomb');
   checkPossibleBomb();
 });
+
+/** Создает поле */
+function createField() {
+  let tbody = document.querySelector('tbody');
+  for (let i = 0; i < COUNTER_ROWS; i++) {
+    let tr = document.createElement('tr');
+    for (let j = 0; j < COUNTER_COLUMNS; j++) {
+      let td = document.createElement('td');
+      td.className = 'td';
+      tr.appendChild(td);
+    }
+    tbody.appendChild(tr);
+  }
+}
 
 /** Создает бомбы и добавляет их на поле */
 function createBombs() {
@@ -104,7 +119,5 @@ function createNear(node) {
   }
 
   node.innerHTML = counter;
-
+  node.classList.add('bombs' + `${counter}`);
 }
-
-// TODO рефакторить

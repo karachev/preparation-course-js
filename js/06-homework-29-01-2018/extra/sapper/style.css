@@ -6,6 +6,7 @@ td {
   text-align: center;
   line-height: 2;
   background-color: #757575;
+  font-weight: bold;
 }
 
 table {
@@ -30,3 +31,33 @@ table {
   background-repeat: no-repeat;
   background-color: white;
 }
+
+.bombs0 {
+  color: transparent;
+}
+
+.bombs1 {
+  color: blue;
+}
+
+.bombs2 {
+  color: green;
+}
+
+.bombs3 {
+  color: red;
+}
+
+.bombs4 {
+  color: darkblue;
+}
+
+.bombs5 {
+  color: darkred;
+}
+
+.bombs6 {
+  color: deepskyblue;
+}
+
+
