@@ -10,28 +10,29 @@
   function makeBuffer() {
     let text = '';
 
-    return function(piece) {
+    buffer.clear = function () {
+      text = '';
+    };
+
+    function buffer(piece) {
       if (arguments.length === 0) { // вызов без аргументов
         return text;
       }
       text += piece;
-    };
+    }
+
+    return buffer;
   }
 
   let buffer = makeBuffer();
 
-  // добавить значения к буферу
-  buffer('Замыкания');
-  buffer(' Использовать');
-  buffer(' Нужно!');
-  alert( buffer() ); // 'Замыкания Использовать Нужно!'
+  buffer("Тест");
+  buffer(" тебя не съест ");
+  alert( buffer() ); // Тест тебя не съест
 
-  let buffer2 = makeBuffer();
-  buffer2(0);
-  buffer2(1);
-  buffer2(0);
+  buffer.clear();
 
-  alert( buffer2() ); // '010'
+  alert( buffer() ); // ""
 
 </script>
 
