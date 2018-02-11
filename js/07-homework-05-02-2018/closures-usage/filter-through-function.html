@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  /* .. ваш код для filter, inBetween, inArray */
+
+  function filter(arr, type) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+      let cash = arr[i];
+      if (type(cash)) {
+        newArr.push(cash);
+      }
+    }
+    return newArr;
+  }
+
+  function inBetween(a, b) {
+    return function filter(x) {
+      return x >= a && x<= b;
+    }
+  }
+
+  function inArray(compareArray) {
+    return function filter(x) {
+      return compareArray.indexOf(x) !== -1;
+    }
+  }
+
+  let arr = [1, 2, 3, 4, 5, 6, 7];
+
+  alert(filter(arr, function(a) {
+    return a % 2 === 0
+  })); // 2,4,6
+
+  alert( filter(arr, inBetween(3, 6)) ); // 3,4,5,6
+
+  alert( filter(arr, inArray([1, 2, 10])) ); // 1,2
+</script>
+</body>
+</html>
