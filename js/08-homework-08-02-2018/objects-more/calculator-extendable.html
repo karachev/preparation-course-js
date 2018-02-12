@@ -6,24 +6,54 @@
 </head>
 <body>
 <script>
+  function Calculator() {
+    let methods = {
+      "+": function (a, b) {
+        return a + b;
+      },
+
+      "-": function (a, b) {
+        return a - b;
+      }
+    };
+
+    this.calculate = function (value) {
+      let arr = value.split(" ");
+      let a = +arr[0];
+      let op = arr[1];
+      let b = + arr[2];
+
+      if (!methods[op] || isNaN(a) || isNaN(b)) {
+        return NaN;
+      }
+
+      return methods[op](a, b);
+    };
+
+    this.addMethod = function (name, func) {
+      methods[name] = func;
+    }
+  }
+
   let calc = new Calculator;
+
+  calc.addMethod("*", function(a, b) {
+    return a * b;
+  });
+  calc.addMethod("/", function(a, b) {
+    return a / b;
+  });
+  calc.addMethod("**", function(a, b) {
+    return Math.pow(a, b);
+  });
 
   alert( calc.calculate("3 + 7") ); // 10
   alert( calc.calculate("3 - 7") ); // -4
+  alert( calc.calculate("21 * 7") ); // 147
+  alert( calc.calculate("21 / 7") ); // 3
+  alert( calc.calculate("2 ** 7") ); // 128
 
-  function Calculator() {
-    this.calculate = function (value) {
-      let arr = value.split(" ");
-      switch(arr[1]) {
-        case "+":
-          result = +arr[0] + +arr[2];
-          return result;
-        case "-":
-          result = +arr[0] - +arr[2];
-          return result;
-      }
-    }
-  }
+
 </script>
 </body>
 </html>
