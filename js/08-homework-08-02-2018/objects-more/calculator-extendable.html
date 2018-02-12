@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let calc = new Calculator;
+
+  alert( calc.calculate("3 + 7") ); // 10
+  alert( calc.calculate("3 - 7") ); // -4
+
+  function Calculator() {
+    this.calculate = function (value) {
+      let arr = value.split(" ");
+      switch(arr[1]) {
+        case "+":
+          result = +arr[0] + +arr[2];
+          return result;
+        case "-":
+          result = +arr[0] - +arr[2];
+          return result;
+      }
+    }
+  }
+</script>
+</body>
+</html>
