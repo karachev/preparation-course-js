@@ -19,9 +19,7 @@
   }
 
   function applyAll(f) {
-    return f(arguments);
-
-    // return func.apply(this, [].slice.call(arguments, 1));
+    return func.apply(this, [].slice.call(arguments, 1));
   }
 
   alert( applyAll(sum, 1, 2, 3) ); // -> sum(1, 2, 3) = 6
