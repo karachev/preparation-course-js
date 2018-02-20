@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  function Machine(power) {
+    this._power = power;
+    this._enabled = false;
+
+    let self = this;
+
+    this.enable = function() {
+      self._enabled = true;
+    };
+
+    this.disable = function() {
+      self._enabled = false;
+    };
+  }
+
+  function Fridge(power) {
+    // унаследовать
+    Machine.apply(this, arguments);
+
+    let food = []; // приватное свойство food
+
+    this.addFood = function() {
+      if (!this._enabled) {
+        throw new Error("Холодильник выключен");
+      }
+      if (food.length + arguments.length > this._power / 100) {
+        throw new Error("Нельзя добавить, не хватает мощности");
+      }
+      for (let i = 0; i < arguments.length; i++) {
+        food.push(arguments[i]); // добавить всё из arguments
+      }
+    };
+
+    this.getFood = function() {
+      return food.slice();
+    };
+
+    this.filterFood = function (f) {
+      return food.filter(f);
+    };
+
+    this.removeFood = function (item) {
+      let idx = food.indexOf(item);
+      if (idx !== -1) food.splice(idx, 1);
+    };
+
+  }
+
+  let fridge = new Fridge(500);
+  fridge.enable();
+  fridge.addFood({
+    title: "котлета",
+    calories: 100
+  });
+  fridge.addFood({
+    title: "сок",
+    calories: 30
+  });
+  fridge.addFood({
+    title: "зелень",
+    calories: 10
+  });
+  fridge.addFood({
+    title: "варенье",
+    calories: 150
+  });
+
+  fridge.removeFood("нет такой еды"); // без эффекта
+  alert( fridge.getFood().length ); // 4
+
+  let dietItems = fridge.filterFood(function(item) {
+    return item.calories < 50;
+  });
+
+  dietItems.forEach(function(item) {
+    alert( item.title ); // сок, зелень
+    fridge.removeFood(item);
+  });
+
+  alert( fridge.getFood().length ); // 2
+</script>
+</body>
+</html>
