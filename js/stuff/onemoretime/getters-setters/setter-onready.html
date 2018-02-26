@@ -32,21 +32,35 @@
       onReady = f;
     };
 
+    let timeID;
     this.run = function() {
-      setTimeout(onReady(), getTimeToBoil());
+      timeID = setTimeout(function() {
+        timeID = null;
+        onReady();
+      }, getTimeToBoil());
+
+    };
+
+    this.isRunning = function () {
+      if (timeID) {
+        return true;
+      }
+      return false;
     };
 
   }
 
   let coffeeMachine = new CoffeeMachine(20000, 500);
-  coffeeMachine.setWaterAmount(150);
+  coffeeMachine.setWaterAmount(100);
 
-  coffeeMachine.setOnReady(function() {
-    let amount = coffeeMachine.getWaterAmount();
-    alert( 'Готов кофе: ' + amount + 'мл' ); // Кофе готов: 150 мл
-  });
+  alert( 'До: ' + coffeeMachine.isRunning() ); // До: false
 
   coffeeMachine.run();
+  alert( 'В процессе: ' + coffeeMachine.isRunning() ); // В процессе: true
+
+  coffeeMachine.setOnReady(function() {
+    alert( "После: " + coffeeMachine.isRunning() ); // После: false
+  });
 </script>
 </body>
 </html>
